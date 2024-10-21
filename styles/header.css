@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.container__botao{
+    display: none;
+}
+
 /* checked é uma pseudoclass e o ~ é um combinador CSS (seletor gerais de irmãos), em que pega todo elemento lista-menu que seguir um elemento container__botão com mesmo pai*/
 .container__botao:checked~.lista-menu{
     display: block;
@@ -34,12 +38,24 @@
     display: none;
     position: absolute; /* permite movimentare o elemento de acordo com outro anterior que tenha uma position diferente de static (por exemplo o relative usado em cabecalho) */
     top: 100%; /* coloca o  elemento totalmente abaixo do outro elemento relativo a ele */
+    width: 60vw;
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
 }
 
 .lista-menu__titulo{
-
+    color: var(--laranja);
+    font-weight: 700;
 }
 
-.lista-menu__item{
-
+.lista-menu__link{
+    background: var(--azul-degrade);
+    /*esses webkit's são código para que o background clip funcione em outros navegadores*/
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    background-clip: text;/*faz a aplicação da dor do backgrund apenas no local que tem texto*/
+    text-transform: uppercase; /*faz com que o texto fique maiusculo*/
 }
