@@ -1,0 +1,45 @@
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* libera a opção de colocar outros atributos top, left, right e bottom */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+/* checked é uma pseudoclass e o ~ é um combinador CSS (seletor gerais de irmãos), em que pega todo elemento lista-menu que seguir um elemento container__botão com mesmo pai*/
+.container__botao:checked~.lista-menu{
+    display: block;
+}
+
+.cabecalho__menu-hamburguer{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url("../assets/Menu.svg");
+    background-repeat: no-repeat; /* como a área padding estava muito grande ele replicou a imagem que tem tamanho fixo */
+    background-position: center; /* necessário usar já que a imagem ficou fora do centro do padding */
+    display: inline-block; /* inline não aceita ajuste de largura(width) e altura(height) */
+}
+
+
+.container__imagem{
+    padding: 1em;   
+}
+
+.lista-menu{
+    display: none;
+    position: absolute; /* permite movimentare o elemento de acordo com outro anterior que tenha uma position diferente de static (por exemplo o relative usado em cabecalho) */
+    top: 100%; /* coloca o  elemento totalmente abaixo do outro elemento relativo a ele */
+}
+
+.lista-menu__titulo{
+
+}
+
+.lista-menu__item{
+
+}
