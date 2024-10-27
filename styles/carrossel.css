@@ -99,3 +99,38 @@
         margin: 2em auto;
     }
 }
+
+@media screen and (min-width: 1728px){
+    .carrossel__container{
+        display: flex;
+        margin: 0em 15vw 3em 15vw; /* vw = largura da viwer port (tela)*/
+        align-items: center;
+    }
+    
+    .swiper{
+        width: 50%;
+    }
+
+    .swiper-pagination{
+        margin: 2em 0em 1em 0em;
+    }
+
+    .card{
+        margin:6em auto 2em 3em ;
+
+    }
+
+    .descricao__titulo{
+        font-size: 2rem;
+    }
+
+    .descricao__titulo-livro{
+        margin: 1.3em 0em;
+    }
+
+    .descricao__texto{
+        font-size: 1rem;
+        width: 80%;
+    }
+
+} 

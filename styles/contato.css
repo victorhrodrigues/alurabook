@@ -55,3 +55,17 @@
         width: 30%;
     }
 }
+
+@media screen and (min-width: 1728px){
+    .contato{
+        padding: 4em 20vw;
+    }
+
+    .contato__descricao{
+        width: 38%;
+    }
+
+    .contato__texto{
+        width: 78%;
+    }
+}
