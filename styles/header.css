@@ -15,6 +15,17 @@
     display: none;
 }
 
+/*~ -> procura alguma classe que esteja depois do elemento colocado anteriormente (.container__botao:checked)
+  > -> procura algo que está dentro de um elemento (.container__rotulo)
+  :checked -> pseudoclasse que busca saber se o input está com a caixa de seleção ativa*/
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer{
+    background-image: url("../assets/Menu Aberto.svg");
+}
+
+.container__botao:checked ~ .container__rotulo{
+    background: var(--azul-degrade);
+}
+
 /* checked é uma pseudoclass e o ~ é um combinador CSS (seletor gerais de irmãos), em que pega todo elemento lista-menu que seguir um elemento container__botão com mesmo pai*/
 .container__botao:checked~.lista-menu{
     display: block;
@@ -120,6 +131,24 @@
 
     .opcoes__botao{
         display: none;  
+    }
+
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item{
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opcoes__item{
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item:hover{
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover > .lista-menu__link{
+        -webkit-text-fill-color: var(--branco); /*necessário pois --azul-degrade funciona por meio do grid em que setamos -webkit-text-fill-color:transparent, trocando agora*/
+        text-decoration: none;
     }
 }
 
